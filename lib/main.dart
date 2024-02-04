@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const VocabApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class VocabApp extends StatelessWidget {
+  const VocabApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter Demo',
-      home: Text('Flutter Demo Home Page'),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'VOCAB',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("wait"),
+        ),
+        body: const Center(
+          child: Text('Hello World'),
+        ),
+      ),
     );
   }
 }
