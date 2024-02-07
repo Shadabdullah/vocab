@@ -39,7 +39,7 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Hello, World!',
+              'Nice Example!',
               style: Theme.of(context).textTheme.bodySmall, 
             ),
            const  SizedBox(height: 20),
