@@ -1,33 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart'; // Correct import statement for flutter_svg
 import 'package:vocab/constants.dart';
-
+import 'package:flutter/cupertino.dart';
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Row( children: [
-            SvgPicture.asset('$svgDirectory/logo.svg'), // Use the correct file name
-            const SizedBox(width: 8), // Add spacing between the logo and title
-             Text('UrduVocab' ,style: Theme.of(context).textTheme.bodyLarge,),
-          ],),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Nice Example!',
-              style: Theme.of(context).textTheme.bodyLarge
+    return DefaultTabController(
+        length: 2, // Specify the number of tabs
+        child: Scaffold(
+            appBar: AppBar(
+              leading: SvgPicture.asset('$svgDirectory/logo.svg'),
+              title: const Text('10') ,
+              actions: [
+                CupertinoButton(
+                  onPressed: () {
+                    // Handle hamburger icon tapped
+                  },
+                  padding: EdgeInsets.zero,
+                  child: Icon(CupertinoIcons.hammer),
+                ),
+              ],
+              bottom: const TabBar(
+                tabs: [
+                  Tab(text: 'Home'),
+                  Tab(text: 'Sets'),
+                ],
+              ),
             ),
-            const SizedBox(height: 20),
-          ],
-        ),
-      ),
-    );
+            body: Center(child: Text("wait"))));
   }
 }

@@ -1,3 +1,3 @@
 // constants.dart
 
-const String svgDirectory = 'assets/icons/';
+const String svgDirectory = 'assets/icons';
