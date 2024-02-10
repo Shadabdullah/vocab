@@ -11,25 +11,35 @@ class MyHomePage extends StatelessWidget {
     return DefaultTabController(
         length: 2, // Specify the number of tabs
         child: Scaffold(
-            appBar: AppBar(
-              leading: SvgPicture.asset('$svgDirectory/logo.svg'),
-              title: const Text('10') ,
-              actions: [
-                CupertinoButton(
-                  onPressed: () {
-                    // Handle hamburger icon tapped
-                  },
-                  padding: EdgeInsets.zero,
-                  child: Icon(CupertinoIcons.hammer),
-                ),
-              ],
-              bottom: const TabBar(
-                tabs: [
-                  Tab(text: 'Home'),
-                  Tab(text: 'Sets'),
-                ],
-              ),
+          appBar: AppBar(
+            leading: SvgPicture.asset(
+              '$svgDirectory/logo.svg',
+              width: 20.5,
+              height: 20,
             ),
-            body: Center(child: Text("wait"))));
+            title: const Text('10'),
+            actions: [
+              CupertinoButton(
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                padding: EdgeInsets.zero,
+                child: Icon(Icons.menu_outlined),
+              ),
+            ],
+            bottom: const TabBar(
+              tabs: [
+                Tab(text: 'Home'),
+                Tab(text: 'Sets'),
+              ],
+            ),
+          ),
+          body: Center(child: Text("wait")),
+          endDrawer: Drawer(
+            backgroundColor: Colors.black,
+            child: ListView(
+                children: <Widget>[Text('Settings'), Text('Remembered')]),
+          ),
+        ));
   }
 }

@@ -16,7 +16,7 @@ class VocabApp extends StatelessWidget {
       themeMode: ThemeMode.system, 
       darkTheme: globalDarkTheme ,
       theme: globalLightTheme ,
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
