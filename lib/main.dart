@@ -16,7 +16,10 @@ class VocabApp extends StatelessWidget {
       themeMode: ThemeMode.system, 
       darkTheme: globalDarkTheme ,
       theme: globalLightTheme ,
-      home: MyHomePage(),
+      home: SafeArea( child: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: HomePage(),
+      )),
     );
   }
 }
