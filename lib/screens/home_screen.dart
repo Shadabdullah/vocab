@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:vocab/constants.dart';
 import 'package:vocab/screens/app_settings.dart';
+import 'package:vocab/screens/progress_page.dart';
 import 'package:vocab/screens/recall_screen.dart';
+import 'package:vocab/screens/sets_page.dart';
+import 'package:vocab/widgets/setcard.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -57,6 +60,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+          body: Expanded(child: TabBarView(children: [ProgressPage(), SetsPage() ])),
         ));
   }
 }
