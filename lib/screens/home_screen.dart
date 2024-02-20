@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-              leading: Center(child: Text("L O G O")),
+              leading: const Center(child: Text("L O G O")),
               centerTitle: true,
               title: const Text('DIAMOND'),
               bottom: const TabBar(tabs: [
@@ -27,30 +27,30 @@ class HomePage extends StatelessWidget {
               color: Colors.white,
               child: ListView(
                 children: <Widget>[
-                  DrawerHeader(
+                  const DrawerHeader(
                       child: Center(
                           child: Text(
                     'U R D U V O C A B',
                     style: TextStyle(fontSize: 20),
                   ))),
                   ListTile(
-                    title: Text('Setting'),
-                    leading: Icon(Icons.settings),
+                    title: const Text('Setting'),
+                    leading: const Icon(Icons.settings),
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => AppSettings()));
+                              builder: (context) => const AppSettings()));
                     },
                   ),
                   ListTile(
-                    title: Text('Recall'),
-                    leading: Icon(Icons.battery_charging_full_outlined),
+                    title: const Text('Recall'),
+                    leading: const Icon(Icons.battery_charging_full_outlined),
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => RecallScreen()));
+                              builder: (context) => const RecallScreen()));
                     },
                   )
                 ],
